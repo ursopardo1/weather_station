@@ -4,7 +4,7 @@ from time import sleep
 import csv
 
 
-serial = serial.Serial('/dev/ttyUSB0')
+serial = serial.Serial('/dev/ttyUSB1')
 serial.flushInput()
 
 data_dict = {}
@@ -18,7 +18,7 @@ while True:
 
             out_data = unpack_data(decoded_data)
             data_dict.update(out_data)
-            sleep(2)
+            sleep(6)
             print(data_dict)
     except:
         print("Script interrompido")
